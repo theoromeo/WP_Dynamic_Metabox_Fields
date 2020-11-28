@@ -1,4 +1,4 @@
-# intro
+# Intro
 An API that helps create dynamic meta boxes for WordPress developers <br> that saves and restores with no hassle
 
 
