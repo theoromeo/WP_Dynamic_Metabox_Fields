@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./wp_dmf/wp_dmf.min.js"></script>
+</head>
+<body>
+
+  <form id="clientProps" action="serverside.php" method="post">
+    <button type="submit">Submit</button>
+  </form>
+<button onclick="wpObject.addField('clientsBasicInfo')">Add Basic Info</button>
+  
+  <script>
+    customFieldHTML = `
+    <div class="clientsBasicInfo">
+    <input type="text" dmf_name="name" placeholder="Client Name" >
+    <input type="text" dmf_name="age" placeholder="Client Age">
+    <input type="text" dmf_name="company" placeholder="Client Company">
+    </div>
+    `;
+
+    wpObject = new WP_dmf('wpObject','clientProps','clientData')
+    wpObject.defineField('clientsBasicInfo',customFieldHTML)
+
+  </script>
+
+</body>
+</html>
